@@ -5,6 +5,10 @@ log:
 accessLog:
   filePath: "/var/log/traefik/access.log"
 
+# TODO нельзя на проде
+api:
+  dashboard: true
+
 entryPoints:
   web:
     address: ":80"
