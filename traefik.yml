@@ -5,9 +5,6 @@ log:
 accessLog:
   filePath: "/var/log/traefik/access.log"
 
-api:
-  dashboard: true
-
 entryPoints:
   web:
     address: ":80"
