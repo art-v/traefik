@@ -1,5 +1,9 @@
 init:
+	@touch acme.json
+	@chmod 600 acme.json
+	@mkdir -p logs
+	@docker network inspect web >/dev/null 2>&1 || docker network create web
+	@docker network inspect web_internal >/dev/null 2>&1 || docker network create --driver bridge --internal web_internal
 
-
-run:
-	docker compose up -d
+up:
+	@docker compose up -d
